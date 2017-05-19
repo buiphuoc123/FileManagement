@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FileManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,145 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="File Management" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5f-Ge-2bC">
+                                <rect key="frame" x="20" y="50" width="335" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzw-ta-68a">
+                                <rect key="frame" x="20" y="103" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.57488762842465757" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Create File">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCreateFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCJ-xu-GGK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-vr-QQF">
+                                <rect key="frame" x="197.5" y="103" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.55433968321917804" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Create Derectory">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCreateDerectory:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpp-uT-Bg1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN4-iw-sxW">
+                                <rect key="frame" x="20" y="166" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.58173694349315064" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Write File">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnWriteFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5oS-Dx-ML7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVw-aR-bQO">
+                                <rect key="frame" x="197.5" y="166" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.54064105308219179" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Read File">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnReadFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aM2-GY-jsb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUg-6y-G45">
+                                <rect key="frame" x="20" y="229" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.58858625856164382" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Move File">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnMoveFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RoU-tU-pKP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-fn-fqq">
+                                <rect key="frame" x="197.5" y="229" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.6228328339041096" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Copy File">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCopyFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0i-Hx-M4E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BST-Z2-TQr">
+                                <rect key="frame" x="20" y="292" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.61598351883561642" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Equality Check">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnEqualityFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q3h-u1-Lb8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Y-zz-oks">
+                                <rect key="frame" x="197.5" y="292" width="147.5" height="33"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="0.6228328339041096" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Delete File">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDeleteFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6iR-WV-bvX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sVw-aR-bQO" firstAttribute="leading" secondItem="UN4-iw-sxW" secondAttribute="trailing" constant="30" id="1SJ-dc-dHg"/>
+                            <constraint firstItem="Q1Y-zz-oks" firstAttribute="top" secondItem="7bA-fn-fqq" secondAttribute="bottom" constant="30" id="2fO-jS-X0S"/>
+                            <constraint firstItem="tzw-ta-68a" firstAttribute="centerY" secondItem="N6N-vr-QQF" secondAttribute="centerY" id="37e-kd-Qef"/>
+                            <constraint firstItem="N6N-vr-QQF" firstAttribute="top" secondItem="R5f-Ge-2bC" secondAttribute="bottom" constant="30" id="9fr-Kl-aWZ"/>
+                            <constraint firstItem="UN4-iw-sxW" firstAttribute="top" secondItem="tzw-ta-68a" secondAttribute="bottom" constant="30" id="AQi-xm-sSe"/>
+                            <constraint firstItem="EUg-6y-G45" firstAttribute="width" secondItem="7bA-fn-fqq" secondAttribute="width" id="CzP-F6-NHz"/>
+                            <constraint firstItem="R5f-Ge-2bC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Fii-WH-wpn"/>
+                            <constraint firstItem="BST-Z2-TQr" firstAttribute="top" secondItem="EUg-6y-G45" secondAttribute="bottom" constant="30" id="GEi-Gp-XEi"/>
+                            <constraint firstAttribute="trailing" secondItem="Q1Y-zz-oks" secondAttribute="trailing" constant="30" id="HTC-L7-TUo"/>
+                            <constraint firstItem="7bA-fn-fqq" firstAttribute="top" secondItem="UN4-iw-sxW" secondAttribute="bottom" constant="30" id="Hz6-Kl-qwX"/>
+                            <constraint firstItem="tzw-ta-68a" firstAttribute="width" secondItem="N6N-vr-QQF" secondAttribute="width" id="JcB-zP-t9N"/>
+                            <constraint firstItem="UN4-iw-sxW" firstAttribute="width" secondItem="sVw-aR-bQO" secondAttribute="width" id="M1i-uc-R3W"/>
+                            <constraint firstAttribute="trailing" secondItem="N6N-vr-QQF" secondAttribute="trailing" constant="30" id="Nvu-oR-ytx"/>
+                            <constraint firstAttribute="trailing" secondItem="7bA-fn-fqq" secondAttribute="trailing" constant="30" id="OO4-Pv-ipr"/>
+                            <constraint firstItem="Q1Y-zz-oks" firstAttribute="leading" secondItem="BST-Z2-TQr" secondAttribute="trailing" constant="30" id="OXw-SE-RI5"/>
+                            <constraint firstItem="BST-Z2-TQr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Rgf-YV-8PQ"/>
+                            <constraint firstItem="N6N-vr-QQF" firstAttribute="leading" secondItem="tzw-ta-68a" secondAttribute="trailing" constant="30" id="SPx-bU-WcP"/>
+                            <constraint firstItem="tzw-ta-68a" firstAttribute="top" secondItem="R5f-Ge-2bC" secondAttribute="bottom" constant="30" id="T0a-Y8-mqw"/>
+                            <constraint firstAttribute="trailing" secondItem="sVw-aR-bQO" secondAttribute="trailing" constant="30" id="TRa-lV-Kfb"/>
+                            <constraint firstItem="UN4-iw-sxW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ULZ-bx-Acf"/>
+                            <constraint firstItem="Q1Y-zz-oks" firstAttribute="leading" secondItem="BST-Z2-TQr" secondAttribute="trailing" constant="30" id="ZjI-lH-aHj"/>
+                            <constraint firstItem="7bA-fn-fqq" firstAttribute="leading" secondItem="EUg-6y-G45" secondAttribute="trailing" constant="30" id="ccs-ck-lVo"/>
+                            <constraint firstItem="sVw-aR-bQO" firstAttribute="leading" secondItem="UN4-iw-sxW" secondAttribute="trailing" constant="30" id="dJy-e9-7Dy"/>
+                            <constraint firstAttribute="trailing" secondItem="R5f-Ge-2bC" secondAttribute="trailing" constant="20" id="eTa-8M-gwd"/>
+                            <constraint firstItem="BST-Z2-TQr" firstAttribute="width" secondItem="Q1Y-zz-oks" secondAttribute="width" id="hF7-gW-bDp"/>
+                            <constraint firstItem="tzw-ta-68a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hag-mK-Gi6"/>
+                            <constraint firstItem="7bA-fn-fqq" firstAttribute="leading" secondItem="EUg-6y-G45" secondAttribute="trailing" constant="30" id="jwb-vu-1Xg"/>
+                            <constraint firstItem="R5f-Ge-2bC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="k8e-FC-0nX"/>
+                            <constraint firstItem="EUg-6y-G45" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="mOC-g5-RZi"/>
+                            <constraint firstItem="EUg-6y-G45" firstAttribute="top" secondItem="UN4-iw-sxW" secondAttribute="bottom" constant="30" id="nCO-na-jJ8"/>
+                            <constraint firstItem="sVw-aR-bQO" firstAttribute="top" secondItem="N6N-vr-QQF" secondAttribute="bottom" constant="30" id="szh-b8-1db"/>
+                            <constraint firstItem="N6N-vr-QQF" firstAttribute="leading" secondItem="tzw-ta-68a" secondAttribute="trailing" constant="30" id="t3U-gY-Gz4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnMoveFile" destination="EUg-6y-G45" id="fgp-17-G1D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-391" y="71"/>
         </scene>
     </scenes>
 </document>
